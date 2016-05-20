@@ -8,9 +8,6 @@ gem 'rails', '3.2.21'
 
 group :development, :test do
 	gem 'sqlite3'
-	gem 'byebug'
-	gem 'web-console','->2.0'
-	gem 'spring'
 end
 
 group :production do
