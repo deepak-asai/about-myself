@@ -1,12 +1,22 @@
 source 'https://rubygems.org'
 
+ruby '1.9.3'
 gem 'rails', '3.2.21'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+group :development, :test do
+	gem 'sqlite3'
+	gem 'byebug'
+	gem 'web-console','->2.0'
+	gem 'spring'
+end
 
+group :production do
+	gem 'pg','0.17.1'
+	gem 'rails_12factor', '0.0.2'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
